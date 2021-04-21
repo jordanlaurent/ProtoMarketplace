@@ -1,7 +1,8 @@
 <template>
 <div >
   <Navbar-header />
-  <Slider-home-page />
+  <ArticleTopHomePage/>
+  <ThumbailProto />
   <NewProtoAcceuil />
   <Footer />
 </div>
@@ -10,11 +11,12 @@
 <script>
 
 import NavbarHeader from '../components/NavbarHeader.vue';
+import ArticleTopHomePage from '../components/ArticleTopHomePage';
+import ThumbailProto  from '../components/thumbailProto';
 import NewProtoAcceuil from '../components/NewProtoAcceuil.vue';
-import SliderHomePage from '../components/SliderHomePage.vue';
 import Footer from '../components/Footer.vue';
 export default {
-  components: {  NavbarHeader, SliderHomePage,NewProtoAcceuil,Footer },
+  components: {  NavbarHeader, NewProtoAcceuil,Footer,ArticleTopHomePage,ThumbailProto },
   created: function () {
     document.title = "Acceuil";
   },

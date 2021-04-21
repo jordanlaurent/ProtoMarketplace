@@ -1,3 +1,4 @@
+  
 <template>
     <div id="CarrouselProto " class="carousel slide"  data-ride="carousel">
   <ol class="carousel-indicators">
@@ -5,7 +6,7 @@
     <li data-target="#CarrouselProto" data-slide-to="1"></li>
     <li data-target="#CarrouselProto" data-slide-to="2"></li>
   </ol>
-  <div class="carousel-inner carouselSize sliderAcceuil">
+  <div class="carousel-inner carouselSize ">
     <div class="carousel-item active">
       <img class="d-block w-100 " src="https://cdn.cloudflare.steamstatic.com/steam/apps/1357610/ss_0daa306eadbaa25f6e154be29343c4a2262afe59.jpg?t=1596239437" alt="First slide">
     </div>
