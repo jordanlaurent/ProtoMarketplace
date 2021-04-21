@@ -14,6 +14,6 @@
     </div>
 </template>
 <style scoped>
-.thumbailProto{justify-content: space-evenly ;  padding-top: 2rem; padding-bottom: 2rem;}
+.thumbailProto{justify-content: space-evenly ;  padding-top: 2rem; padding-bottom: 2rem;margin: 0;}
 .bgThumbailProto{ display: flex; flex-direction: column; background-position: center; background-image: linear-gradient(0.25turn,rgba(0, 0, 0, 0.925), rgba(233, 151, 19, 0.712)),url("https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80");}
 </style>

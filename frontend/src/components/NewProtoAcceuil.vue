@@ -1,7 +1,7 @@
 <template>
 <div class="color2 boderNewProto">
     <h1 class="text-warning text-center FontGrass tittleNewProto"> NOUVEAUX PROTOTYPE </h1>
-<div class="card-deck colorFont2 NewProto ">
+<div class="card-deck w-100 colorFont2 NewProto ">
   <div class=" card h-100 w-100">
     <img class="img-fluid" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1357610/ss_0daa306eadbaa25f6e154be29343c4a2262afe59.jpg?t=1596239437" alt="Card image cap">
     <div class="color3 pt-2 pb-3 pl-2 pr-2 cardProtoNew text-center ">
@@ -31,7 +31,7 @@
 </template>
 <style>
 @media (min-width: 1040px){ 
-.NewProto{padding-bottom: 10rem;padding-left: 10rem;padding-right: 10rem;}
+.NewProto{padding-bottom: 10rem;padding-left: 10rem;padding-right: 10rem;margin: 0;}
 .tittleNewProto{padding-top: 3rem;}
 .cardProtoNew{border-bottom-left-radius: 1rem; border-bottom-right-radius: 1rem; display: flex; flex-direction: column; }
 .boderNewProto{ border-top: 1rem dashed rgb(238, 205, 16); border-bottom: 3px solid rgb(238, 205, 16);}

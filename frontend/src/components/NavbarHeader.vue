@@ -23,7 +23,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">TOUS LES CREATEURS</a>
+        <router-link class="nav-link" to="ToutLesCreateur">TOUS LES CREATEURS</router-link>
       </li>
             <li class="nav-item">
         <a class="nav-link " href="#">FAVORIS</a>

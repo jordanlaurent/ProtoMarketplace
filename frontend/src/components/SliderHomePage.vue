@@ -28,5 +28,5 @@
 </template>
 
 <style>
-.sliderAcceuil { max-height: 30m;}
+.sliderAcceuil { max-height: 30rem;}
 </style>
