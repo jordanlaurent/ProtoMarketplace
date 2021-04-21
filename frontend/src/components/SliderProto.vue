@@ -1,9 +1,9 @@
 <template>
-    <div id="carouselExampleIndicators" class="carousel slide"  data-ride="carousel">
+    <div id="CarrouselProto " class="carousel slide"  data-ride="carousel">
   <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#CarrouselProto" data-slide-to="0" class="active"></li>
+    <li data-target="#CarrouselProto" data-slide-to="1"></li>
+    <li data-target="#CarrouselProto" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner carouselSize sliderAcceuil">
     <div class="carousel-item active">
@@ -16,11 +16,11 @@
       <img class="d-block w-100" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1357610/ss_fb0cf50ee7740e425e0af40f4a943512efdd2ab7.jpg?t=1596239437" alt="Third slide">
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" href="#CarrouselProto" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#CarrouselProto" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
