@@ -5,7 +5,7 @@ import Acceuil from '../views/Acceuil.vue'
 import Connexion from '../views/Connexion.vue'
 import Inscription from '../views/Inscription.vue'
 import PageProto from '../views/PageProto.vue'
-
+import Profil from '../views/Profil.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,6 +30,10 @@ const routes = [
     path: '/Prototype',
     name: 'PageProto',
     component: PageProto,
+  },{
+    path: '/Profil',
+    name: 'Profil',
+    component: Profil,
   },
   {
     path: '*', 
