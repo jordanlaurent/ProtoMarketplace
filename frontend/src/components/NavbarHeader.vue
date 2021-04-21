@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark color1 ">
+  <nav class="navbar navbar-expand-lg navbar-light color1 navbarHeader">
   <router-link to="Acceuil" class="btn" ><img src="../assets/logo.webp" width="155px"  class="navbar-brand"></router-link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -12,31 +12,34 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          CATEGORIE
+          CATEGORIES
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">TOUT LES PROTOTYPE</a>
-          <a class="dropdown-item" href="#">Action / Aventure</a>
-          <a class="dropdown-item" href="#">Course </a>
-          <a class="dropdown-item" href="#">Strategie / Reflexion</a>
+          <a class="dropdown-item" href="#">JEUX VIDEO</a>
+          <a class="dropdown-item" href="#">LOGICIEL</a>
+          <a class="dropdown-item" href="#">DEVELOPPEMENT WEB</a>
           <div class="dropdown-divider"></div>
           <router-link to="Prototype" class="dropdown-item" href="#"><span class="FontColor1"> ★★★★☆ | </span> DESKTOP FARM </router-link>
         </div>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#">TELECHARGER VOTRE PROTOTYPE</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#">TOUS LES CREATEURS</a>
       </li>
             <li class="nav-item">
-        <a class="nav-link text-warning" href="#">FAVORIS</a>
+        <a class="nav-link " href="#">FAVORIS</a>
       </li>
+       <li class="nav-item">
+        <a class="nav-link text-warning" href="#">TELECHARGER VOTRE PROTOTYPE</a>
+      </li> 
       <li class="nav-item">
-        <a class="nav-link text-info" href="#">CONTACT</a>
+        <a class="nav-link text-dark" href="#">CONTACT</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Gta v , WOW , Fortnite ..." aria-label="Recherche">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+      <input class="form-control mr-sm-2 btn-dark" type="search" placeholder="Gta v , WOW , Fortnite ..." aria-label="Recherche">
+      <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Rechercher</button>
     </form>
+     <img class="imgProfilNavbar " src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" >
   </div>
 </nav>
 </template>
@@ -52,5 +55,6 @@ export default {
 </script>
 
 <style scoped>
-
+.imgProfilNavbar{ max-width: 6rem; margin-left: 3rem; border-radius: 50%;}
+.navbarHeader{ border-color: #000;border-width: 0 0 1px;border-style:solid ;}
 </style>
