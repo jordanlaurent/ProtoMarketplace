@@ -18,36 +18,30 @@
       <div>
   <h5 class="text-center">Langue du Prototype </h5>
   <div class="form-outline mb-4 col text-center ">
-      <div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3 ">Francais </label>
-      </div>
-  <div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">English</label>
-  </div>
-  <div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">Spanish</label>
-  </div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">Russia</label>
+     <div class="btn-group"> 
+   <button type="button" class="btn btn-dark dropdown-toggle"
+data-toggle="dropdown">Choisissez <span class="caret"></span></button>
+   <ul class="dropdown-menu bg-dark  text-center" role="menu"> 
+      <li><a class="colorFont1" href="#">Francais</a></li> 
+      <li><a class="colorFont1" href="#">Anglais</a></li> 
+      <li><a class="colorFont1" href="#">Espagnol</a></li> 
+   </ul> 
+</div>
   </div>
       </div>
 <!-- Categorie du prototype -->
 <div class="col">
   <h5 class="text-center">Catégorie du Prototype </h5>
   <div class="form-outline mb-4 text-center col">
-      <div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">Jeux Video </label>
-      </div>
-      <div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">Logiciel</label>
-      </div>
-     <input type="checkbox" id="scales" name="scales">
-    <label class="form-label pl-2" for="form6Example3">Développement Web</label>
+     <div class="btn-group"> 
+   <button type="button" class="btn btn-dark dropdown-toggle"
+   data-toggle="dropdown">Choisissez <span class="caret"></span></button>
+   <ul class="dropdown-menu bg-dark" role="menu"> 
+      <li><a class="colorFont1" href="#">Developpement Web</a></li> 
+      <li><a class="colorFont1" href="#">Logiciel</a></li> 
+      <li><a class="colorFont1" href="#">Jeux Video</a></li> 
+   </ul> 
+</div>
   </div>
 </div>
   <!-- Telecharger prototype / patchnote -->
@@ -116,7 +110,6 @@ export default {
 
 <style scoped>
 .checkboxStyle{overflow-wrap: break-word;}
-
 @media (min-width: 1040px){ 
 .displayCtg{display: flex;justify-content: space-evenly; }
 }
