@@ -1,12 +1,12 @@
 <template>
-<body id="loginflat"> 
-  <section class="centerTxt colorFont1 "> 
-    <img class="pb-5 w-50" src="../assets/logo.webp">
-    <h2 class="pb-3">HAVE FUN <span class="colorFont2">!</span> CREATE <span class="colorFont2"> GREAT GAMES </span> </h2>
-    <h3 class="inline">Recceuillez des avis sur votre <span class="colorFont2"> Proto </span>, <span class="colorFont2">Corriger </span> le,<span class="colorFont2"> Commercialiser </span> le ! </h3>
-      <div class="mt-4">
-        <router-link to="Connexion" type="button" class="btn btn-success mr-5"> Connexion </router-link>
-        <router-link to="Inscription" type="button" class="btn btn-light"> Inscription </router-link>
+<body> 
+  <section class="centerTxt colorFont3 colorWTSP HomeDesign  SizeMbHome DisplayMbHome"> 
+    <img class="pb-5 mx-auto d-block" src="../assets/logo.webp">
+    <h3 class="pb-3 ">HAVE FUN ! CREATE <span class="colorFont3"> GREAT GAMES </span> </h3>
+    <h5 class="inline pb-3">Recceuillez des avis sur votre Proto, Corriger le, Commercialiser le ! </h5>
+      <div class="mt-4 ">
+        <router-link to="Connexion" type="button" class="btn btn-dark mr-4"> CONNEXION </router-link>
+        <router-link to="Inscription" type="button" class="btn btn-light"> INSCRIPTION </router-link>
       </div>
   </section>
 </body>
@@ -23,18 +23,21 @@ export default {
 }
 </script>
 <style>
-#template{background-color: violet;}
+@media (max-width: 1040px){ 
+.DisplayMbHome{display: flex; flex-direction: column;position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); text-align: center; }
+.SizeMbHome{min-width: 100%; min-height: 100%; justify-content: center;}
+}
+@media (min-width: 1040px){ 
+.SizeMbHome{padding: 5rem;}
+}
+.HomeDesign{border-radius: 4px;}
 .centerTxt{position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%); text-align: center;}
-#loginflat {
-  background-image:linear-gradient(rgba(27, 34, 46, 0.842), rgba(27, 34, 46, 0.726)), url("../assets/homeBackround.jpg") ;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  align-items: center;
-  justify-content: center;
+
+html,body{
+background-image: linear-gradient(0.25turn,rgba(0, 0, 0, 0.74), rgba(245, 244, 244, 0.658)),url("https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
 }
 </style>

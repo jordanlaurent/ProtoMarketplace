@@ -8,6 +8,7 @@
 .color1{ background-color: whitesmoke ;}
 .color2{background-color: #161616;}
 .color3{background-color: rgba(12, 11, 11, 0.931);}
+.colorWTSP{background-color: rgba(255, 255, 255, 0.5) !important;}
 .colorFont1 {color: white;}
 .colorFont3{color: black;}
 .colorFont2{color: #f5f5f5 ;}

@@ -54,15 +54,7 @@ export default {
   name: "Connexion",
 };
 </script>
-
 <style>
-html,body{
-background-image: url('../assets/homeBackround.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
-}
 
 .container{
 height: 100%;
