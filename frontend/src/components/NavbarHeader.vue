@@ -32,7 +32,7 @@
         <a class="nav-link text-warning" href="#">TELECHARGER VOTRE PROTOTYPE</a>
       </li> 
       <li class="nav-item">
-        <a class="nav-link text-dark" href="#">CONTACT</a>
+        <router-link class="nav-link text-dark" to="Contact">CONTACT</router-link>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">

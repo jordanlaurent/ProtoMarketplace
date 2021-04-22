@@ -7,6 +7,7 @@ import Inscription from '../views/Inscription.vue'
 import PageProto from '../views/PageProto.vue'
 import Profil from '../views/Profil.vue'
 import Toutlescreateur from '../views/ToutLesCreateur.vue'
+import Contact from '../views/Contact.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,6 +40,10 @@ const routes = [
     path: '/Toutlescreateur',
     name: 'Toutlescreateur',
     component: Toutlescreateur,
+  },{
+    path: '/Contact',
+    name: 'Contact',
+    component: Contact,
   },
   {
     path: '*', 
