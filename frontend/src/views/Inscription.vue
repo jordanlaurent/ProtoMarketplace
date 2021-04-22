@@ -1,8 +1,8 @@
 <template>
   <div class="row ">
-        <div class=" well well-sm centerTxt">
+        <div class=" well well-sm centerTxt colorWTSP p-2">
             <legend class="colorFont1 ">Inscription !</legend>
-            <form action="#" method="post" class="form" role="form">
+            <form action="#" method="post" class="form " role="form">
             <div class="row pb-3">
                 <div class="col-xs-6 col-md-6">
                     <input class="form-control" name="Prenom" placeholder="Prenom" type="text"
@@ -32,3 +32,6 @@ export default {
   name: "Inscription",
 };
 </script>
+<style scoped>
+
+</style>

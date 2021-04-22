@@ -1,6 +1,6 @@
 <template>
   <div id="body" >
-    <router-view />
+    <router-view  />
   </div>
 </template>
 
@@ -14,4 +14,11 @@
 .colorFont2{color: #f5f5f5 ;}
 p,h1,h2,h3,h4,h5,h6,a{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 .FontGrass{font-weight: bold;}
+
+@media (max-width: 1040px){ 
+body{background-image: linear-gradient(0.25turn,rgba(0, 0, 0, 0.74), rgba(245, 244, 244, 0.658)),url("https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg");}
+}
+@media (min-width: 1040px){ 
+body{background-image: linear-gradient(0.25turn,rgba(0, 0, 0, 0.74), rgba(245, 244, 244, 0.658)),url("https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_960_720.jpg");}
+}
 </style>
