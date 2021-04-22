@@ -29,7 +29,7 @@
         <a class="nav-link " href="#">FAVORIS</a>
       </li>
        <li class="nav-item">
-        <a class="nav-link text-warning" href="#">TELECHARGER VOTRE PROTOTYPE</a>
+        <router-link class="nav-link text-warning" to="TelechargerVotrePrototype">TELECHARGER VOTRE PROTOTYPE</router-link>
       </li> 
       <li class="nav-item">
         <router-link class="nav-link text-dark" to="Contact">CONTACT</router-link>

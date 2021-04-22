@@ -4,7 +4,7 @@
     <div class="textPres ml-3">
     <h1> Farm village </h1>
         <ul> 
-            <li>Genres : Simulation</li>
+            <li>Catégorie : Jeux video</li>
             <li >Développeur : <a class="text-warning" href=""> JORDAN LAURENT</a></li>
             <li>Langages : Anglais</li>
             <li>Derniere mise a jour : 19/04/2021</li>

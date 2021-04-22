@@ -8,6 +8,7 @@ import PageProto from '../views/PageProto.vue'
 import Profil from '../views/Profil.vue'
 import Toutlescreateur from '../views/ToutLesCreateur.vue'
 import Contact from '../views/Contact.vue'
+import TelechargerVotrePrototype from '../views/TelechargerVPrototype.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -44,6 +45,10 @@ const routes = [
     path: '/Contact',
     name: 'Contact',
     component: Contact,
+  },{
+    path: '/TelechargerVotrePrototype',
+    name: 'TelechargerVotrePrototype',
+    component: TelechargerVotrePrototype,
   },
   {
     path: '*', 
