@@ -15,6 +15,14 @@ export default {
     document.title = "Prototip";
   },
   name: 'Prototip',
+    mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+  }
 }
 </script>
 

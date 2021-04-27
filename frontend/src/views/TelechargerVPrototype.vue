@@ -104,7 +104,15 @@ export default {
   created: function () {
     document.title = "Telecharger Votre Prototype";
   },
-  name: "Telecharger Votre Prototype",
+  name: "Telecharger_Votre_Prototype",
+  mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+  }
 }
 </script>
 

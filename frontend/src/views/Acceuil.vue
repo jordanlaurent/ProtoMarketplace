@@ -21,5 +21,13 @@ export default {
     document.title = "Acceuil";
   },
   name: "Acceuil",
+    mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+  }
 }
 </script>

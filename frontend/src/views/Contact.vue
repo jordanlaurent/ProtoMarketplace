@@ -28,6 +28,14 @@ export default {
     document.title = "Contact";
   },
   name: "Contact",
+    mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+  }
 }
 </script>
 <style scoped>

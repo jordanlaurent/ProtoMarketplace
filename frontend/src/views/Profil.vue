@@ -1,14 +1,14 @@
 <template>
 <div class="color2 colorFont1">
   <Navbar-header />
-    <div class="rowP ProfilDisplay "> 
+    <div class="rowP ProfilDisplay " v-for="user in users" :key="user"> 
         <div class="color2 colorFont2 ">
             <br>
             <div class="column txtalign col mt-5">
                <a href=""><img class="imgProfilNavbar " src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" ></a>
                 <div class="rowP txtalign mt-2">
-                <h2 class="mr-3 text-warning">Jordan </h2>
-                <h2 class="text-warning"> Laurent </h2>
+                <h2 class="mr-3 text-warning">{{user.name}} </h2>
+                <h2 class="text-warning"> {{user.last_name}} </h2>
                 </div>
                 <button  class="btn btn-light ml-3">MODIFIER PSEUDO</button>
             </div>
@@ -20,14 +20,14 @@
             </div>
             <div class="txtalign">
             <h2 > Biographie </h2>
-            <p class="text-warning">Bienvenue sur mon profil partager un maximum autour de vous ; ) </p>
+            <p class="text-warning">{{user.bio}} </p>
             <button  class="btn btn-light ml-3">MODIFIER BIO</button>
             <hr class="bg-dark">
             </div>
             <div class=" txtalign ">
                 <div class="column ">
                     <h2>E-mail </h2>
-                    <p class="pl-3 ">Jordan@outlook.fr</p>
+                    <p class="pl-3 ">{{ user.email}}</p>
                     <button  class="btn btn-light ml-3">MODIFIER E-MAIL</button>
                 </div>
                 <hr class="bg-dark">
@@ -40,7 +40,7 @@
             <div class="rowP txtalign  ">
                 <div class="column ">
                     <h2>Nom Studio </h2>
-                    <p>Dev Startup</p>
+                    <p>{{user.studio_name}}</p>
                 </div>
                 <div class="column txtalign col">
                 <h2> Follower </h2>
@@ -66,14 +66,37 @@
 
 import NavbarHeader from '../components/NavbarHeader.vue';
 import Footer from '../components/Footer.vue';
+const axios = require('axios');
 export default {
   components: {  NavbarHeader,Footer, },
   created: function () {
     document.title = "Profil";
   },
   name: "Profil",
+    data() {
+    return {
+		users:"",
+    };
+	
+  },
+    mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+        axios.post("http://localhost:3000/user",
+        {
+            userid: localStorage.getItem("jwt"),
+          }).then((response) => {
+          this.users = response.data  
+     })
+   }
 }
 </script>
+
+
 <style scoped>
 .imgProfilNavbar{ max-width: 15rem;  border-radius: 50%;}
 .ProfilDisplay{margin: 10rem; margin-right: 30rem;margin-left: 30rem; border: 4px solid; border-radius: 5px;}

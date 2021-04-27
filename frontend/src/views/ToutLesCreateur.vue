@@ -2,29 +2,14 @@
 <div >
   <Navbar-header />
 <div class=" color1 AllCreateurDisplay row">
-  <div class="pr-5">
-        <img class=" rounded-circle" width="140" height="140" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" >
+  <div class="pr-5 col text-center"  v-for="createur in createurs" :key="createur.info">
+        <img class=" rounded-circle" width="140" height="140" :src="createur.photo" >
         <title>jordan</title>
-        <h2>jordan laurent</h2>
-        <p></p>
+        <h2>{{ createur.name }} {{ createur.last_name }}</h2>
+        <p>{{ createur.email}}</p>
+        <p>{{ createur.bio }}</p>
        <small >
-         <button class="btn-danger btn-sm btn  ml-1"> Supprimer l'utilisateur </button></small>
-      </div>
-     <div class="pr-5">
-        <img class=" rounded-circle" width="140" height="140" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" >
-        <title>jordan</title>
-        <h2>jordan laurent</h2>
-        <p></p>
-       <small >
-         <button class="btn-danger btn-sm btn  ml-1"> Supprimer l'utilisateur </button></small>
-      </div>
-       <div class="pr-5">
-        <img class=" rounded-circle" width="140" height="140" src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" >
-        <title>jordan</title>
-        <h2>jordan laurent</h2>
-        <p></p>
-       <small >
-         <button class="btn-danger btn-sm btn  ml-1"> Supprimer l'utilisateur </button></small>
+         <button class="btn-danger btn-sm btn  ml-1" v-if="createur.active == 1"> Supprimer l'utilisateur </button></small>
       </div>
 </div>
   <Footer />
@@ -32,7 +17,7 @@
 </template>
 
 <script>
-
+const axios = require('axios');
 import NavbarHeader from '../components/NavbarHeader.vue';
 import Footer from '../components/Footer.vue';
 export default {
@@ -40,7 +25,25 @@ export default {
   created: function () {
     document.title = "TOUT LES CREATEURS";
   },
-  name: "TOUT LES CREATEURS",
+  name: "TOUT_LES_CREATEURS",
+  data () {
+    return {
+      createurs:null
+    }
+  },
+  mounted () {
+    var jwt = localStorage.getItem("jwt");
+      if (jwt == null) {
+         window.location = "/Connexion";
+      } else {
+        console.log("");
+      }
+
+    axios 
+    .get('http://localhost:3000/api/users/getAll')
+    .then(response =>
+     (this.createurs = response.data))
+  }
 }
 </script>
 

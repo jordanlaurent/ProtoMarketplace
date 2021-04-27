@@ -39,6 +39,7 @@
       <input class="form-control mr-sm-2 btn-dark" type="search" placeholder="Gta v , WOW , Fortnite ..." aria-label="Recherche">
       <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Rechercher</button>
     </form>
+     <button v-on:click="disconnect" class="btn btn-danger m-2">Deconnecter</button>
       <router-link to="Profil"><img class="imgProfilNavbar " src="https://scontent-frt3-1.xx.fbcdn.net/v/t1.6435-9/88241822_2898191913567063_5504142800486137856_n.jpg?_nc_cat=107&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=R5lrV8kCpbAAX9B_yt_&_nc_ht=scontent-frt3-1.xx&oh=8627c3f6c8ad0c41c02dd627bc4d98b3&oe=60A6764D" ></router-link>
   </div>
 </nav>
@@ -50,7 +51,13 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+ methods: {
+      disconnect(){
+      localStorage.clear();
+      window.location = "/Connexion";
+    },
+ }
 }
 </script>
 

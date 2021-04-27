@@ -11,15 +11,14 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form>
+				<form @submit="postData" method="post" role="form">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-person " viewBox="0 0 16 16">
   <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
 </svg></span>
 						</div>
-						<input type="text" class="form-control" placeholder="Nom d'utilisateur">
-						
+						<input id="email" v-model="email"  type="email" class="form-control" placeholder="Email" required />
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
@@ -27,14 +26,17 @@
   <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
 </svg></span>
 						</div>
-						<input type="password" class="form-control" placeholder="Mots de passe">
+						<input id="password" v-model="password" type="password" class="form-control" placeholder="Mots de passe" required />
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Se souvenir de moi
 					</div>
 					<div class="form-group">
-						<router-link to="Acceuil" type="submit" class="btn btn-dark float-right login_btn"> Connexion</router-link>
+						<button type="submit" class="btn btn-dark float-right login_btn"> Connexion</button>
 					</div>
+			<section class="popup" v-if="errors">
+          <p class=" text-dark FontGrass">{{errors}}</p>
+        </section>
 				</form>
 			</div>
 			<div class="card-footer">
@@ -51,11 +53,46 @@
 </template>
 
 <script>
+const axios = require('axios');
 export default {
   created: function () {
     document.title = "Connexion";
   },
   name: "Connexion",
+     data() {
+    return {
+		errors:'',
+      email: '',
+      password: "",
+    };
+	
+  },
+  methods: {
+    postData(e) {
+        e.preventDefault();
+      var optionAxios = {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      };
+     axios
+        .post(
+          "http://localhost:3000/api/users/login",
+          {
+            email: this.email,
+            password: this.password,
+          },
+          { optionAxios }
+        )
+        .then((response) => {
+			localStorage.setItem("jwt", response.data.token)
+            this.$router.replace({ name: "Acceuil" });
+        })
+        .catch((error) => {
+          (this.errors = error.response.data.error)
+        });
+    }
+  },
 };
 </script>
 <style>
